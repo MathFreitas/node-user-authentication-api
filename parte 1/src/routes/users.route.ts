@@ -1,4 +1,4 @@
-import { Router, Request, Response, NextFunction } from "express";
+import { NextFunction, Request, Response, Router } from "express";
 import { StatusCodes } from "http-status-codes";
 
 //get /users
@@ -7,7 +7,7 @@ import { StatusCodes } from "http-status-codes";
 //put /users/:uuid
 //delete /users/:uiid
 
-const usersRoute = Router(); 
+const usersRoute = Router();
 
 usersRoute.get('/users', (req: Request, res: Response, next: NextFunction) => {
     const users = [{ userName: 'Matheus' }];
